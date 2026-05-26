@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صوفي ال دليم - موسوعة الفنانين العراقيين</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #faf8f5;
+            --content-bg: #ffffff;
+            --text-primary: #2c2416;
+            --text-secondary: #5a5044;
+            --accent-gold: #c9a961;
+            --accent-brown: #8b6f47;
+            --border-light: #e8e4dd;
+            --border-dark: #d4cec3;
+            --shadow: rgba(44, 36, 22, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            line-height: 1.8;
+            font-size: 17px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--accent-brown) 0%, var(--accent-gold) 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 8px var(--shadow);
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .site-title {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .site-subtitle {
+            font-size: 1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 2rem;
+        }
+        
+        /* Main Content */
+        .main-content {
+            background: var(--content-bg);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            box-shadow: 0 2px 12px var(--shadow);
+            padding: 3rem;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .article-title {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-brown);
+            margin-bottom: 0.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        
+        .article-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        .article-content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        /* Sidebar - Infobox */
+        .sidebar {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .infobox {
+            background: var(--content-bg);
+            border: 1px solid var(--border-dark);
+            border-radius: 8px;
+            box-shadow: 0 2px 12px var(--shadow);
+            overflow: hidden;
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .infobox-header {
+            background: linear-gradient(135deg, var(--accent-brown) 0%, var(--accent-gold) 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .infobox-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8dcc8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid var(--border-dark);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .infobox-image::before {
+            content: '♫';
+            font-size: 6rem;
+            color: var(--accent-gold);
+            opacity: 0.3;
+            position: absolute;
+        }
+        
+        .infobox-image-text {
+            font-family: 'Amiri', serif;
+            font-size: 3rem;
+            color: var(--accent-brown);
+            text-align: center;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+        }
+        
+        .infobox-content {
+            padding: 1.5rem;
+        }
+        
+        .info-row {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            font-weight: 700;
+            color: var(--accent-brown);
+            font-size: 0.95rem;
+        }
+        
+        .info-value {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        /* Links */
+        a {
+            color: var(--accent-brown);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--accent-gold);
+            border-bottom-style: solid;
+        }
+        
+        /* Footer */
+        .footer {
+            max-width: 1200px;
+            margin: 3rem auto 2rem;
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        /* Decorative Elements */
+        .decorative-line {
+            height: 2px;
+            background: linear-gradient(to left, transparent, var(--accent-gold), transparent);
+            margin: 2rem 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .infobox {
+                position: static;
+            }
+            
+            .main-content {
+                padding: 2rem;
+            }
+            
+            .article-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .site-title {
+                font-size: 1.8rem;
+            }
+            
+            .main-content {
+                padding: 1.5rem;
+            }
+            
+            .article-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="site-title">موسوعة الفنانين العراقيين</h1>
+            <p class="site-subtitle">منصة توثيق الإبداع العراقي المعاصر</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <h1 class="article-title">صوفي ال دليم</h1>
+            <p class="article-subtitle">فنان موسيقي عراقي يلفت الأنظار بأسلوبه الخاص</p>
+            
+            <div class="decorative-line"></div>
+            
+            <article class="article-content">
+                <p>برز اسم "صوفي ال دليم" كأحد الوجوه الموسيقية العراقية الصاعدة على منصات التواصل الاجتماعي، بعد أن استطاع جذب الجمهور من خلال أعماله الموسيقية والألحان التي يقدمها بأسلوب حديث يمزج بين الإحساس العراقي والإيقاعات المعاصرة.</p>
+
+                <p>واشتهر صوفي ال دليم عبر المحتوى الموسيقي والبثوث المباشرة على منصة تيك توك، حيث حقق تفاعلاً واسعاً من المتابعين المهتمين بالموسيقى والأعمال الفنية الحديثة.</p>
+
+                <p>ويعمل صوفي ال دليم في مجال التلحين وصناعة الموسيقى الرقمية، مع اهتمام بتطوير أسلوبه الفني وتقديم أعمال تعكس الطابع الشبابي العراقي بطريقة عصرية.</p>
+
+                <p>ويرى متابعون أن أسلوبه الموسيقي المختلف وحضوره عبر المنصات الرقمية ساهما في زيادة شعبيته خلال الفترة الأخيرة، خصوصاً بين جمهور المحتوى الموسيقي العربي على الإنترنت.</p>
+
+                <p>ويطمح صوفي ال دليم إلى توسيع نشاطه الفني خلال المرحلة المقبلة، عبر إنتاج المزيد من الأعمال الموسيقية والتعاون مع صناع محتوى وفنانين من مختلف أنحاء الوطن العربي.</p>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <div class="infobox">
+                <div class="infobox-header">
+                    البطاقة التعريفية
+                </div>
+                
+                <div class="infobox-image">
+                    <div class="infobox-image-text">
+                        صوفي<br>ال دليم
+                    </div>
+                </div>
+                
+                <div class="infobox-content">
+                    <div class="info-row">
+                        <div class="info-label">الاسم</div>
+                        <div class="info-value">صوفي ال دليم</div>
+                    </div>
+                    
+                    <div class="info-row">
+                        <div class="info-label">المهنة</div>
+                        <div class="info-value">فنان موسيقي</div>
+                    </div>
+                    
+                    <div class="info-row">
+                        <div class="info-label">التخصص</div>
+                        <div class="info-value">التلحين والموسيقى الرقمية</div>
+                    </div>
+                    
+                    <div class="info-row">
+                        <div class="info-label">الجنسية</div>
+                        <div class="info-value">🇮🇶 عراقي</div>
+                    </div>
+                    
+                    <div class="info-row">
+                        <div class="info-label">النشاط</div>
+                        <div class="info-value">منصات التواصل الاجتماعي</div>
+                    </div>
+                    
+                    <div class="info-row">
+                        <div class="info-label">الشهرة</div>
+                        <div class="info-value">تيك توك، موسيقى عراقية</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <p>موسوعة الفنانين العراقيين © 2026 - جميع الحقوق محفوظة</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;">
+            منصة لتوثيق والاحتفاء بالمواهب الموسيقية العراقية المعاصرة
+        </p>
+    </footer>
+</body>
+</html>
